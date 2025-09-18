@@ -7,7 +7,7 @@ tags: [Cybersecurity, Hardware]
 category: Personal projects
 draft: false
 ---
-# Repurposing an Old Smartphone for Cybersecurity Projects: Galaxy S4 Case Study
+# Repurposing an old smartphone for cybersecurity projects: Galaxy S4 case study
 
 In the world of cybersecurity and decentralized communication technologies, projects like **ATAK** (Android Team Awareness Kit) and **Meshtastic** are attracting growing interest.
 
@@ -17,7 +17,7 @@ What if, instead of letting our old phones age in a drawer, we gave them a secon
 
 Here's my experience with a nearly ten-year-old **Samsung Galaxy S4**, and how I managed to refurbish it to test these tools.
 
-## Hardware Diagnostics
+## Hardware diagnostics
 
 I took out my old Galaxy S4 to check if it would still work.
 
@@ -50,36 +50,40 @@ Many forums suggested a **complete reset** as the only solution, which would hav
 
 > This is where the technical part begins.
 
-## The Hack: Bypassing the Android Lock
+# The Hack: Bypassing the Android lock
 
 To recover my data without a reset, I had to go through a root and recovery flashing process:
 
-1. **Install Odin**
+## **Install Odin**
 
-- **What is it?**
   Windows software developed by Samsung, allowing you to flash ROMs and system images on Galaxy phones.
 - Useful for installing a **custom recovery** like TWRP.
 
-2. **Download TWRP (Team Win Recovery Project)**
+## **Download TWRP (Team Win Recovery Project)**
 
-- **What is it for?**
   An alternative recovery offering advanced access to the file system, allowing you to manipulate partitions, install custom ROMs, and access internal files.
 
-3. **Unlocking PC to Smartphone communication**
+## **Unlocking PC to smartphone communication**
 
 The phone wasn't recognized initially.
 
-Solution: Install **Samsung USB Driver for Mobile Phones.**
+Solution: Install **Samsung USB driver for mobile phones.**
 
 Need to disable **Windows kernel integrity** to allow driver installation.
 
-4. **Flash the correct recovery**
+Usually locked by Windows, if you can't change it, change the value of `Enabled` in the registry at
+```powershell
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\DeviceGuard\Scenarios\HypervisorEnforcedCodeIntegrity
+```
+> Do not forget to turn back on when you're done
+
+## **Flash the correct recovery**
 
 After several unsuccessful attempts (wrong TWRP version, unusable screen), I finally found a compatible generic version.
 ![TWRP on Galaxy S4](./smartphone/odin.png)
-Tip: always check the exact version for your model before flashing.
+> Always check the exact version for your model before flashing
 
-5. **Deleting the lock files**
+## **Deleting the lock files**
 
 From TWRP recovery mode:
 
@@ -93,9 +97,9 @@ Delete the following files:
 - `locksettings.db-wal`
 - `locksettings.db-shm`
 
-> After rebooting, the phone no longer asked for a password.
+> After rebooting, the phone no longer asks for a password
 
-## Final Results
+# Final results
 
 In less than a day, I was able to regain access to my Galaxy S4, **back up my data**, and prepare to install tools like ATAK or Meshtastic.
 
@@ -105,7 +109,7 @@ In less than a day, I was able to regain access to my Galaxy S4, **back up my da
 
 Using the exact same procedure, you can use Odin to flash root software to your device instead of TWRP.
 
-## Cybersecurity Watch Points
+## Cybersecurity watch points
 
 - **Privacy:** These manipulations demonstrate that older locking systems are vulnerable. With time and a few tools, a motivated attacker can bypass the security.
 - **Obsolescence:** Android 5 or 6 no longer offer security updates. For network use (ATAK, Meshtastic), the device must be isolated from the internet and mitigate risks, especially if your device is rooted.
@@ -115,7 +119,7 @@ Using the exact same procedure, you can use Odin to flash root software to your 
   - Avoid using an old phone as a personal device.
   - Reserve these devices for **testing, research, and controlled environments.**
 
-## Conclusion
+# Conclusion
 
 Reusing an old smartphone can be an excellent way to experiment with secure communication tools like **ATAK** or **Meshtastic.**
 Beyond the technical aspects, this experiment highlights an important truth: **the security of a system depends as much on its software as on its hardware longevity.**
