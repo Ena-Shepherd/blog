@@ -141,9 +141,5 @@ If you want to dig into kernel internals, WinDbg is essential — it gives you v
 > Check out my repository for all the driver resources I’ve gathered.
 > ::github{repo="Ena-Shepherd/Awesome-Windows-Drivers-Development"}
 
-Also, if you want to create your first kernel mode driver, read my other post:
-(not out yet)
-
-**Setting up a virtual machine with WinDbg to develop your first KMDF kernel driver**.
-
-**Conducting E2E tests on kernel drivers**
+If you want to read about how i conduct unit tests in the kernel, read my other post: <br/>
+[**Unit Testing kernel drivers**](https://ena-shepherd.github.io/blog/posts/testing-complex-architectures-kernel-drivers/)
