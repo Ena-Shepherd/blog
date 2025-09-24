@@ -1,18 +1,16 @@
 ---
-title: Hoarding Windows drivers resources
+title: Windows drivers basics and resources
 published: 2025-05-16
 description: 'A collection of useful/hard-to-find resources for developing windows drivers'
 image: './drivers/do_not_talk_to_driver.jpg'
-tags: [Software, Cybersecurity]
+tags: [Software, Cybersecurity, Windows Kernel]
 category: 'Personal projects'
 draft: false 
 lang: ''
 ---
-
 ::github{repo="Ena-Shepherd/Awesome-Windows-Drivers-Development"}
 
 <br/>
-
 
 # What's a driver ?
 
@@ -83,6 +81,7 @@ Drivers run at **high privilege**, which makes them useful to both defenders and
 * **Defensive use**: security products (EDR, anti-cheat) sometimes deploy kernel drivers to obtain visibility or enforcement that cannot be achieved from user-mode.
 
 ![The one ring](./drivers/the-one-ring.png)
+
 > Everyone fights for the ring-0 (kernel access)
 
 Because of the risk, writing and auditing drivers requires extra caution: memory safety, strict validation of inputs, and minimal privilege usage are essential.
@@ -138,10 +137,13 @@ If you want to dig into kernel internals, WinDbg is essential — it gives you v
 * **WinDbg**: Microsoft’s debugger, essential for kernel and driver development.
 
 # Want to dive deeper?
+
 > Check out my repository for all the driver resources I’ve gathered.
-::github{repo="Ena-Shepherd/Awesome-Windows-Drivers-Development"}
+> ::github{repo="Ena-Shepherd/Awesome-Windows-Drivers-Development"}
 
 Also, if you want to create your first kernel mode driver, read my other post:
 (not out yet)
 
 **Setting up a virtual machine with WinDbg to develop your first KMDF kernel driver**.
+
+**Conducting E2E tests on kernel drivers**
