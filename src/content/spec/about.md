@@ -1,7 +1,7 @@
 # About
 
-This is my blog site for posting the various projects i do.
+This is where I post and document interesting projects.
 
-![Trophies](https://camo.githubusercontent.com/4c74b66de2f64ba71d2831966e144a93e9af25166224e8e04f687b8bc54547db/68747470733a2f2f6769746875622d70726f66696c652d74726f7068792e76657263656c2e6170702f3f757365726e616d653d456e612d5368657068657264267468656d653d7261646963616c266e6f2d6672616d653d7472756526636f6c756d6e3d37)
+![Trophies](https://github-trophies.vercel.app/?username=ena-shepherd&theme=radical&no-frame=true&no-bg=false&margin-w=4">7)
 
 ::github{repo="Ena-Shepherd/Ena-Shepherd"}
